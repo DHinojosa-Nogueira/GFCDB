@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>2D Database Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+    ></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-top">
+        <a href="index.html" class="logo">
+          <img src="./images/logo.jpg" alt="GFCDB Logo" />
+        </a>
+        <h2 style="color: white; top: 8vh">2D Map</h2>
+      </div>
+    </div>
+    <div id="filter-controls" style="margin: 4vw 2vh; text-align: center">
+      <button id="show-quality-filter">Filter by Quality Index</button>
+      <div id="quality-filter-section" style="display: none; margin-top: 12px">
+        <div class="filter-actions">
+          <button id="select-all-quality">Seleccionar todos</button>
+          <button id="deselect-all-quality">Quitar todos</button>
+        </div>
+        <div id="quality-filter-wrap"></div>
+      </div>
+    </div>
+    <div id="map" style="height: 100vh"></div>
+    <div
+      class="map-legend"
+      aria-label="Leyenda mapa: últimos años de actualización"
+    >
+      <div class="legend-title">Last year updated</div>
+      <ul class="legend-list">
+        <li class="legend-item">
+          <span class="swatch" style="background: red"></span>1968–1990
+        </li>
+        <li class="legend-item">
+          <span class="swatch" style="background: #ff5733"></span>1990–2000
+        </li>
+        <li class="legend-item">
+          <span class="swatch" style="background: orange"></span>2000–2005
+        </li>
+        <li class="legend-item">
+          <span class="swatch" style="background: #f3e476"></span>2005–2010
+        </li>
+        <li class="legend-item">
+          <span class="swatch" style="background: #51e725"></span>2010–2015
+        </li>
+        <li class="legend-item">
+          <span class="swatch" style="background: #53c48a"></span>2015–2020
+        </li>
+        <li class="legend-item">
+          <span class="swatch" style="background: #336a30"></span>&gt;2020
+        </li>
+      </ul>
+    </div>
+    <script src="./script/map2d.js"></script>
+  </body>
+</html>

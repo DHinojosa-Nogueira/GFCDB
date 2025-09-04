@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mean table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/tables.css" />
+    <script
+      defer
+      src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+    ></script>
+    <script type="module" defer src="./script/mean.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-top">
+        <a href="index.html" class="logo">
+          <img src="./images/logo.jpg" alt="GFCDB Logo" />
+        </a>
+        <h2 style="color: white; top: 8vh">
+          Global Food Composition Database Explorer (Mean)
+        </h2>
+      </div>
+    </div>
+    <div class="button-group">
+      <button id="show-food-group-filter">Filter by food group</button>
+      <button id="show-column-filter">Filter by Compounds</button>
+      <button id="open-extra-table" style="display: none">% Occurrence</button>
+    </div>
+    <div
+      id="food-group-filter-section"
+      style="margin-bottom: 16px; display: none"
+    ></div>
+    <div
+      id="column-filter-section"
+      style="margin-bottom: 16px; display: none"
+    ></div>
+    <div id="extra-modal" class="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="extra-modal-title"
+      >
+        <div class="modal__header">
+          <h3 id="extra-modal-title" class="modal__title">% Occurrence</h3>
+          <button
+            class="modal__close"
+            title="Cerrar"
+            aria-label="Cerrar"
+            data-close-modal
+          >
+            &times;
+          </button>
+        </div>
+        <div id="extra-table-wrap" class="modal__body"></div>
+      </div>
+    </div>
+    <div id="table-wrap"></div>
+  </body>
+</html>

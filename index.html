@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Composition Databases</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 id="title"></h1>
+        <p id="authors"></p>
+      </div>
+    </header>
+    <content>
+      <div id="options">
+        <div id="map-section">
+          <div>
+            <img src="images/map.jpg" alt="map" />
+          </div>
+          <div>
+            <a href="./map2d.html" id="load-map">2D</a>
+            <a href="./map3d.html" id="load-map">3D</a>
+            <p id="fecha1" style="color: white; text-align: center"></p>
+          </div>
+        </div>
+        <div id="map-section">
+          <div>
+            <img src="images/logo.jpg" alt="map" />
+          </div>
+          <div>
+            <a href="./mediam.html" id="load-map">MEDIAM</a>
+            <a href="./mean.html" id="load-map">MEAN</a>
+            <p id="fecha2" style="color: white; text-align: center"></p>
+          </div>
+        </div>
+      </div>
+    </content>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+  ></script>
+  <script src="./script/script.js"></script>
+</html>
